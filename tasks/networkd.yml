@@ -1,0 +1,10 @@
+---
+- name: (networkd) copy systemd network file
+  template:
+    src: networkd_network_template.j2
+    dest: "/etc/systemd/network/{{ item.priorty }}-{{ item.name }}.network"
+    mode: 0644
+  loop: "{{ takel_systemd_network_list }}"
+  notify:
+    - reload daemon
+    - activate systemd-networkd

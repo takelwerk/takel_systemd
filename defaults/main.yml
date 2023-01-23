@@ -1,3 +1,4 @@
 ---
 takel_systemd_service_list: []
 takel_systemd_timer_list: []
+takel_systemd_network_list: []

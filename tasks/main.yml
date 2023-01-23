@@ -3,6 +3,13 @@
   set_fact:
     takel_systemd_handler_services_list: []
 
+- name: (main) include networkd tasks
+  import_tasks: networkd.yml
+  tags:
+    - takel
+    - takel_systemd
+    - takel_systemd_networkd
+
 - name: (main) include services tasks
   import_tasks: services.yml
   tags:

@@ -10,3 +10,9 @@
     enabled: true
     force: true
   loop: "{{ takel_systemd_handler_services_list }}"
+
+- name: activate systemd-networkd
+  systemd:
+    name: systemd-networkd
+    enabled: true
+    force: true
