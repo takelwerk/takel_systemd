@@ -3,7 +3,7 @@
 Name={{ item.match.name }}
 {% endif %}
 {% if item.match.mac is defined %}
-MacAddress={{ item.match.mac }}
+MACAddress={{ item.match.mac }}
 {% endif %}
 {% if item.match.permanent_mac is defined %}
 PermanentMACAddress={{ item.match.permanent_mac }}
@@ -38,7 +38,6 @@ DNS={{ dns }}
 {% if item.domains is defined %}
 Domains={{ item.domains | list | join(' ') }}
 {% endif %}
-
 
 {% if item.routes is defined %}
 {% for route in item.routes %}
