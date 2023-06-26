@@ -7,8 +7,8 @@
   loop: "{{ takel_systemd_service_list }}"
   register: new_installed_services
   notify:
-    - Reload daemon
-    - Enable services
+    - reload daemon
+    - enable services
 
 - name: (services) fetch changed services  # noqa 503 (no-handler)
   ansible.builtin.set_fact:

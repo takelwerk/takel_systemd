@@ -7,8 +7,8 @@
   loop: "{{ takel_systemd_timer_list }}"
   register: new_installed_timer
   notify:
-    - Reload daemon
-    - Enable services
+    - reload daemon
+    - enable services
 
 - name: (timer) fetch changed services  # noqa 503
   ansible.builtin.set_fact:
