@@ -1,4 +1,12 @@
 ---
+- name: (main) include install
+  ansible.builtin.import_tasks: install.yml
+  tags:
+    - takel
+    - takel_systemd
+    - takel_systemd_install
+  when: takel_systemd_network_systemd_resolved
+
 - name: (main) set default
   ansible.builtin.set_fact:
     takel_systemd_handler_services_list: []

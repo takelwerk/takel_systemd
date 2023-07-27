@@ -1,0 +1,6 @@
+---
+- name: (install) install packages
+  ansible.builtin.apt:
+    name: systemd-resolved
+    state: present
+    update_cache: true
