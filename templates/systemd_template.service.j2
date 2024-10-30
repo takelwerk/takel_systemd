@@ -51,6 +51,9 @@ RestartSec={{ item.RestartSec }}
 {% if item.StartLimitBurst is defined %}
 StartLimitBurst={{ item.StartLimitBurst }}
 {% endif %}
+{% if item.SuccessExitStatus is defined %}
+    SuccessExitStatus={{ item.success_exit_status }}
+{% endif %}
 
 [Install]
 WantedBy={{ item.wanted_by | default('multi-user.target') }}
